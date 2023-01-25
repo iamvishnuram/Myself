@@ -1,0 +1,121 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Vishnu Ram</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Subscribing Vishnu Ram</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="/profile">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/profile/#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/profile/#portfolio">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/profile/#testmonial">Testmonial</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/profile/#blog">Blog</a>
+                </li>
+                <li class="item ml-md-3">
+                    <a class="link" href="#contact">Pay Now</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Billing!</span>
+                <span class="down">Section</span>
+            </h1>
+            <p class="header-subtitle">Subscribe</p>  
+            <a class="link" href="#contact"><button  class="btn btn-primary">Subscribe & Pay</button></a>          
+        </div>              
+    </header><!-- end of page header -->
+
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">Lets Concatinate?</p>
+            <h6 class="section-title mb-5">Personal Details</h6>
+            <!-- contact form -->
+            <form method="post" class="contact-form col-md-10 col-lg-8 m-auto">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        {% render_field forms.f_name type="text" size="50" class="form-control" placeholder="Your First Name" %}
+                    </div>
+                    <div class="form-group col-sm-6">
+                        {% render_field forms.l_name type="text" size="50" class="form-control" placeholder="Your Last Name" %}
+                    </div>
+                    <div class="form-group col-sm-6">
+                        {% render_field forms.email type="email" size="50" class="form-control" placeholder="Enter Email" %}
+                     </div>
+                     <div class="form-group col-sm-6">
+                        {% render_field forms.phone type="number" size="50" class="form-control" placeholder="Enter Phone Number" %}
+                     </div>
+                    <div class="form-group col-sm-12">
+                        {% render_field forms.address name="comment" id="comment" rows="6" class="form-control" placeholder="Write Address" %}
+                    </div>
+                    <div class="form-group col-sm-6">
+                        {% render_field forms.nationality type="text" size="50" class="form-control" placeholder="Enter Nationality" %}
+                     </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Pay Now" class="btn btn-outline-primary rounded">                  
+                    </div>
+                </div>  
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+       <!-- footer -->
+       <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">Vishnu Ram M</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.facebook.com/vishnu.ram.315" class="link"><i class="ti-facebook"></i></a>
+                <a href="https://join.skype.com/invite/wMAgwnvSQ2ld" class="link"><i class="ti-skype"></i></a>
+                <a href="https://in.pinterest.com/vishnuram80/" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="https://www.instagram.com/___ramm_m/" class="link"><i class="ti-instagram"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+
+    <!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'assets/js/meyawo.js' %}"></script>
+</body>
+</html>

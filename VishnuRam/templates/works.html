@@ -1,0 +1,161 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>My Works</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+        <!-- Page Navbar -->
+        <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+            <div class="container">
+                <a class="logo" href="#">There u go {{user.username}}</a>         
+                <ul class="nav">
+                    <li class="item">
+                        <a class="link" href="/profile">Home</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/profile/#about">About</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/profile/#portfolio">Portfolio</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/profile/#testmonial">Testmonial</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/profile/#blog">Blog</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="item ml-md-3">
+                        <a href="/logout" class="btn btn-primary">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="item ml-md-3">
+                        <a href="#" class="btn btn-primary">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                </a>
+            </div>          
+        </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up" style="font: verdana;">My Projects<i class="fas fa-check-circle"></i></span>
+            </h1> 
+            <h6>
+                One of the most interesting projects I have had the pleasure of working on was a E-Commerce Platform Project. I found it so interesting because of the impact it had on me. I also enjoyed working with the HTML, CSS and DJANGO. The discussions i had about the pros and cons of each step were just exhilarating. I think it was such a joy to be able to see a project from start to finish. I really learned a lot about web Development, Designing and the importance of making and sticking to a plan.        
+            </h6> 
+            <div class="about-caption">
+                    
+                <a href="#service"><button class="btn btn-primary">View all</button></a> 
+             </div>           
+        </div>              
+    </header><!-- end of page header -->     
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Did ?</p>
+            <h5 class="section-title mb-6">Portfolio</h5>
+            <!-- row -->
+            <div class="row" >
+                <div class="col-md-6 col-lg-6" style="padding-bottom: 50px;">
+                    <div class="service-card" style="box-shadow: 10px 10px 30px grey; border: 1px  grey; border-radius: 15px;">
+                        <div class="body">
+                            <a href="http://vishnuram.pythonanywhere.com/"><img src="{% static 'assets/imgs/pencil-case.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">ToDo Application</h6>
+                            <p class="subtitle">This App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. We can add more tasks at any time and delete a task that is completed.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6" style="padding-bottom: 50px;">
+                    <div class="service-card" style="box-shadow: 10px 10px 30px grey; border: 1px  grey; border-radius: 15px;">
+                        <div class="body">
+                            <a href="http://mazebankk.pythonanywhere.com/"><img src="{% static 'assets/imgs/pencil-case.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Banking Website</h6>
+                            <p class="subtitle">This is an Online Banking Concept created using Django Web Framework. it has a fully functional Navbar also user ca register and login using their id and password, User can select any of the mode they wish to invest and submit their details that would be fetched ro the database</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-12" style="padding-bottom: 50px;">
+                    <div class="service-card" style="box-shadow: 10px 10px 30px grey; border: 1px  grey; border-radius: 15px;">
+                        <div class="body">
+                            <a href="https://vishnuram2.pythonanywhere.com/store/"><img src="{% static 'assets/imgs/pencil-case.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">E-Commerce Platform</h6>
+                            <p class="subtitle">An e-commerce platform is a software that enables the commercial process of buying and selling over the internet. Here user have fully functioning navbar where user can search for a perticular item as well as add or remove items from the cart as well. This is the project that i mentioned at the begining and felt very challenging as a beginner </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6" style="padding-bottom: 50px;">
+                    <div class="service-card" style="box-shadow: 10px 10px 30px grey; border: 1px  grey; border-radius: 15px;">
+                        <div class="body">
+                            <a href="http://vishnuram3.pythonanywhere.com/"><img src="{% static 'assets/imgs/pencil-case.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Travello</h6>
+                            <p class="subtitle">Travello is the first static template project i practiced where the user can register as well as login to the page, adding few images from the database and nothing much on this</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6" style="padding-bottom: 50px;">
+                    <div class="service-card" style="box-shadow: 10px 10px 30px grey; border: 1px  grey; border-radius: 15px;">
+                        <div class="body">
+                            <a href="http://vishnuram4.pythonanywhere.com/"><img src="{% static 'assets/imgs/pencil-case.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Movie Store</h6>
+                            <p class="subtitle">Movie store is the project that i came up with some CSS works like cards, navbars and this project was also my practice area and added few images from the database and also the user can add movie details, images and it saves to database and thats it</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+       <!-- footer -->
+       <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">Vishnu Ram M</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.facebook.com/vishnu.ram.315" class="link"><i class="ti-facebook"></i></a>
+                <a href="https://join.skype.com/invite/wMAgwnvSQ2ld" class="link"><i class="ti-skype"></i></a>
+                <a href="https://in.pinterest.com/vishnuram80/" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="https://www.instagram.com/___ramm_m/" class="link"><i class="ti-instagram"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+
+    <!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'assets/js/meyawo.js' %}"></script>
+</body>
+</html>

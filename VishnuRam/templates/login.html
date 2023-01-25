@@ -1,0 +1,83 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Vishnu Ram</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Login!</span>
+            </h1>       
+        </div>              
+    
+
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">Lets Concatinate?</p>
+            <h6 class="section-title mb-5">Login Details</h6>
+            <!-- contact form -->
+            <form method="post" action='' class="contact-form col-md-10 col-lg-8 m-auto">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" name='username' class="form-control" placeholder="Enter Username">                 
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="password" name='password' size="50" class="form-control" placeholder="Enter Password">                 
+                    </div>
+                    <div class="form-group col-md-12 mt-3">
+                        <input type="submit" value="Login" class="btn btn-outline-primary rounded"> <br><br>            
+                    </div>
+                    <div class="form-group col-md-12 mt-3">
+                        <p>Don't have an Account ?<a href="/join">Click here</a></p>              
+                    </div>
+                </div>  
+            </form>
+                {% for i in messages %}
+                    <h2>{{i}}</h2>
+                    {% endfor %}<!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+</header><!-- end of page header -->
+
+       <!-- footer -->
+       <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">Vishnu Ram M</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.facebook.com/vishnu.ram.315" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+
+    <!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'assets/js/meyawo.js' %}"></script>
+</body>
+</html>
